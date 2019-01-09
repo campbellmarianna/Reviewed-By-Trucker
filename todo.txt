@@ -1,0 +1,6 @@
+Header:
+- add gradient behind with a truck image
+Color Palette: https://flatuicolors.com/palette/us
+- Color from palette:#d63031
+- Shade of color: #D94243
+    - Source: https://coolors.co/b7b3a1-d1ca98-d94243-f7f06d-ffb140

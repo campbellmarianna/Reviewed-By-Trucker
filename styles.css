@@ -12,14 +12,15 @@ body {
     height: 100%;
     font-size: 18px;
     font-family: Helvetica;
-    font-size: 14px;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .container {
     color: #444444;
     display: flex;
     flex-direction: column;
-
+    background-color: #b2bec3;
+    text-align: center;
 
 }
 
@@ -32,23 +33,26 @@ div.container div {
 Header
 *********************************************************/
 .header {
-    background-color: #0984e3;
     display: flex;
     flex-direction: column;
+    /* text-align: center; */
 }
 
 div.header h1 {
     font-family: 'Lato', sans-serif;
     font-size: 50px;
-
+    margin-bottom: 10px;
+    margin-top: 55px;
+    color: #D94243;
+    letter-spacing: .5px;
 }
 
 div.header h3 {
-
+    font-weight: 500;
 }
 
 .description {
-    background-color: #d63031;
+
 }
 
 /*********************************************************
