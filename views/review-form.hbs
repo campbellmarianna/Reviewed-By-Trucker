@@ -17,9 +17,60 @@
         Describe your load below. (Arrow)
     </div>
     <div class="questions">
-        Questions
+    <form method="POST" action="/review">
+        <label for="load-select"> Which load do you have: </label>
+        <select id="load-select" name="loadNum">
+            <option value="">--Please choose a load number--</option>
+            {{#each loadReview}}
+            <option value="{{this.loadNum}}">{{this.loadNum}}</option>
+            {{/each}}
+        </select>
+
+        <label for="wait-select"> Do you have to wait? </label>
+        <select id="wait-input" name="waitTime">
+            <option value=""> Wait Time </option>
+            <option value="None">No Wait</option>
+            <option value="30">30 min</option>
+            <option value="1">1 hour</option>
+            <option value="1+"> 1+</option>
+        </select>
+
+        <label for="weight-select"> What is the weight of the load? </label>
+        <select id="weight-select" name="loadWeight">
+            <option value=""> Weight </option>
+            <option value="toLight">To Light</option>
+            <option value="justRight">Just Right</option>
+            <option value="heavy">Heavy</option>
+        </select>
+
+        <label for="safety-select"> What is the safety of the loud? </label>
+        <select id="safety" name="safety">
+            <option value=""> Safety </option>
+            <option value="unstable">Unstable</option>
+            <option value="Lights">Stable</option>
+        </select>
+
+        <label for="lights-select"> Does the load have traffic lights? </label>
+        <select id="lights-select" name="lights">
+            <option value="Lights"> Yes </option>
+            <option value="noLights"> No </option>
+        </select>
+
+        <label for="waitReason"> What is the reason for the wait? </label>
+        <textarea id="waitReason" rows="5" cols="33" name="waitReason">
+
+        </textarea>
+
+        <label for="Othercomments"> Have more coments about the load, add them below. </label>
+        <textarea id="waitReason" rows="5" cols="33" name="otherComments"></textarea>
+
     </div>
     <div class="end">
         Check boxs and submit
+        <!-- SUBMIT BUTTON -->
+        <div class="submit-btn">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
     </div>
 </div>
