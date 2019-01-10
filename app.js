@@ -12,6 +12,8 @@ app.set('view engine', 'hbs');
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.urlencoded({ extended: true }))
 
+// Point this to production mongodb datatbase URI
+const port = process.env.PORT || 3000;
 
 const mongoUri =
    process.env.MONGODB_URI || "mongodb://localhost:27017/rbt";
@@ -47,6 +49,6 @@ app.post('/review', (req,res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('App listening on port 3000!')
 })
