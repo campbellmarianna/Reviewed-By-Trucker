@@ -67,3 +67,13 @@ Further Questions and Submission
 .end {
     background-color: #FAFAFA;
 }
+
+/*********************************************************
+SUCCESS PAGE
+*********************************************************/
+.message {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 60px;
+}

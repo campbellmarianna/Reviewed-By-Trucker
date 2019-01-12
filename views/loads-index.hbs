@@ -1,0 +1,26 @@
+<!-- views/loads-index -->
+<h1>Loads</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Pickup Date</th>
+            <th scope="col">Origin Location</th>
+            <th scope="col">Destination </th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each loads}}
+        <tr>
+            <th scope="row"><a href="/loads/{{@index}}">{{@index}}</th>
+            <td>{{this.pickupDate}}</a></td>
+            <td>{{this.originLocation}}</td>
+            <td>{{this.destination}}</td>
+            <td>{{this.price}}</td>
+        </tr>
+        {{else}}
+            <h3 class="empty">No loads</h3>
+        {{/each}}
+    </tbody>
+</table>
