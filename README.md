@@ -5,10 +5,12 @@ This app gets information from a trucker about a load to the dispatcher to help 
 
 A trucker will be able to answer and few questions about the load.
 
+Website: https://rbt-mc.herokuapp.com/
+
 ## Base URL
 
 ```
-http://localhost:3000/
+https://rbt-mc.herokuapp.com/
 ```
 
 ## Running Locally
