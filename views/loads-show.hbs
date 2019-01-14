@@ -1,7 +1,17 @@
 <!-- views/loads-show -->
-<h1>Load</h1>
-<h1>Pickup Date: {{load.pickupDate}}</h1>
-<h3>Origin Location: {{load.originLocation}}</h3>
-<h3>Destination: {{load.destination}}</h3>
-<h3>Price: {{load.price}}</h3>
-<h3>Content: {{load.content}}</h3> 
+<a href="/">Back to Home</a>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <h1>Load</h1>
+        <h1>Pickup Date: {{load.pickupDate}}</h1>
+        <h3>Origin Location: {{load.originLocation}}</h3>
+        <h3>Destination: {{load.destination}}</h3>
+        <h3>Price: {{load.price}}</h3>
+        <h3>Content: {{load.content}}</h3>
+
+        <hr>
+
+        <!-- Comment form -->
+        {{> comment-form}}
+    </div>
+</div>

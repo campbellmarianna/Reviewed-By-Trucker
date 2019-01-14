@@ -3,6 +3,8 @@ const express = require('express');
 var exphbs = require('express-handlebars');
 const path = require('path');
 const mongoose = require('mongoose');
+// const db = mongoose('localhost/rbt');
+// const
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -54,16 +56,33 @@ app.get('/success', (req, res) => {
 
 
 // OUR MOCK ARRAY OF LOAD INFO
-const loads = [
-    { pickupDate: "01/18/19", originLocation: "246 McAllister Street San Fransico, California", destination: "62169 Addison Drive Joplin, Missiouri", price: "2000", content: "sand"},
-    { pickupDate: "01/17/19", originLocation: "555 Post Street San Fransico, California", destination: "54621 Adobe Street Directory, Maine", price: "1800", content: "soap"}
-];
+const Load = mongoose.model ('Load', {
+    pickupDate: String,
+    originLocation: String,
+    destination: String,
+    price: String
+});
+
+;
 
 // Load Routes
 // INDEX
 app.get('/loads', (req, res) => {
-    res.render('loads-index', {loads : loads})
-})
+    load.find()
+    .then(loads => {
+        console.log(loads)
+        // an array of load data what is show below
+        res.render('loads-index', {loads : loads});
+    }).
+    catch(err => {
+        console.log(err);
+    });
+    // rbt.load.insertMany([
+    //         { pickupDate: "01/18/19", originLocation: "246 McAllister Street San Fransico, California", destination: "62169 Addison Drive Joplin, Missiouri", price: "2000", content: "sand"},
+    //         { pickupDate: "01/17/19", originLocation: "555 Post Street San Fransico, California", destination: "54621 Adobe Street Directory, Maine", price: "1800", content: "soap"}
+    // ])
+    // console.log('Array of data inserted into database')
+});
 app.listen(port, () => {
     console.log('App listening on port 3000!')
 });

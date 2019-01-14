@@ -1,0 +1,26 @@
+<!--views/loads-new.hbs -->
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form method="POST" action="/loads">
+            <fieldset>
+                <legend>New Load</legend>
+                <div class="form-group">
+                        <label for="pickupDate">PickUp Date:</label><br>
+                        <input class="form-control" id="pickupDate" type="text" name="pickupDate" value="{{load.pickupDate}}"/>
+                </div>
+                <div class="form-group">
+                        <label for="originLocation">Origin Location:</label><br>
+                        <input class="form-control" id="load" type="text" name="originLocation" value="{{load.originLocation}}"/>
+                </div>
+                <div class="form-group">
+                        <label for="destination">Destination: </label><br>
+                        <input class="form-control" id="destination" type="text" name="destination" value="{{load.destination}}"/>
+                </div>
+                <div class="form-group">
+                        <label for="load">Price: </label><br>
+                        <input class="form-control" id="load" type="text" name="load" value="{{load.load}}"/>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
