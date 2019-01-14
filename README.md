@@ -13,6 +13,13 @@ Website: https://rbt-mc.herokuapp.com/
 https://rbt-mc.herokuapp.com/
 ```
 
+User can see a list of loads.
+
+```
+Index - http://localhost:3000/loads
+Show - http://localhost:3000/loads/:id
+```
+
 ## Running Locally
 Make sure you have [Node.js](http://nodejs.org/) >= 10.11.0 installed.
 
