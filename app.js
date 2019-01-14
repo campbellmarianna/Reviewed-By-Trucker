@@ -35,7 +35,7 @@ const loadReview = mongoose.model('loadReview', {
 });
 
 // ROOT ROUTE
-app.get('/', (req, res) => {
+app.get('/review-form', (req, res) => {
     res.render('review-form');
 });
 
@@ -66,6 +66,11 @@ const Load = mongoose.model ('Load', {
 ;
 
 // Load Routes
+// Preview
+app.get('/', (req, res) => {
+    res.render('home');
+});
+
 // INDEX
 app.get('/loads', (req, res) => {
     load.find()

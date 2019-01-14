@@ -4,3 +4,11 @@ Color Palette: https://flatuicolors.com/palette/us
 - Color from palette:#d63031
 - Shade of color: #D94243
     - Source: https://coolors.co/b7b3a1-d1ca98-d94243-f7f06d-ffb140
+Comment Form
+    - add alert('Thank you for submitting a comment')!
+        - Example:https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_button_test
+
+Put Project ERD in a Design Document on Github
+
+Notes:
+- Find good Design Templates
