@@ -13,8 +13,8 @@
     <tbody>
         {{#each loads}}
         <tr>
-            <th scope="row"><a href="/loads/{{@index}}">{{@index}}</th>
-            <td>{{this.pickupDate}}</a></td>
+            <th scope="row">{{@index}}</th>
+            <td><a href="/loads/{{@index}}">{{this.pickupDate}}</a></td>
             <td>{{this.originLocation}}</td>
             <td>{{this.destination}}</td>
             <td>{{this.price}}</td>
