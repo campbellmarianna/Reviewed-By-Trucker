@@ -11,4 +11,4 @@ Comment Form
 Put Project ERD in a Design Document on Github
 
 Notes:
-- Find good Design Templates
+- Find good Design Templates in the future
