@@ -6,7 +6,13 @@
     <h1>Reviewed By Trucker</h1>
     <h3>Review companies that post loads</h3>
     <!-- Use Bootstrap Button -->
-    <!-- <div class="around-btn"> -->
-        <button type="button" id="home-btn" class="btn btn-info"> View Loads </button>
-    <!-- </div> -->
+    <button action="/loads" type="button" id="home-btn" class="btn btn-info">
+        View Loads
+    </button>
+
+    <script type="text/javascript">
+        document.getElementById("home-btn").onclick = function () {
+            location.href = "/loads"
+        }
+    </script>
 </div>

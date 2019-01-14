@@ -34,7 +34,7 @@ const loadReview = mongoose.model('loadReview', {
     otherComments: String
 });
 
-// ROOT ROUTE
+// FORM ROUTE
 app.get('/review-form', (req, res) => {
     res.render('review-form');
 });
@@ -63,7 +63,11 @@ const Load = mongoose.model ('Load', {
     price: String
 });
 
-;
+// ARRAY OF GOOD DATA
+[
+        { pickupDate: "01/18/19", originLocation: "246 McAllister Street San Fransico, California", destination: "62169 Addison Drive Joplin, Missiouri", price: "2000", content: "sand"},
+        { pickupDate: "01/17/19", originLocation: "555 Post Street San Fransico, California", destination: "54621 Adobe Street Directory, Maine", price: "1800", content: "soap"}
+]
 
 // Load Routes
 // Preview
@@ -73,28 +77,67 @@ app.get('/', (req, res) => {
 
 // INDEX
 app.get('/loads', (req, res) => {
-    load.find()
+    Load.find()
     .then(loads => {
-        console.log(loads)
-        // an array of load data what is show below
         res.render('loads-index', {loads : loads});
     }).
     catch(err => {
         console.log(err);
     });
-    // rbt.load.insertMany([
-    //         { pickupDate: "01/18/19", originLocation: "246 McAllister Street San Fransico, California", destination: "62169 Addison Drive Joplin, Missiouri", price: "2000", content: "sand"},
-    //         { pickupDate: "01/17/19", originLocation: "555 Post Street San Fransico, California", destination: "54621 Adobe Street Directory, Maine", price: "1800", content: "soap"}
-    // ])
-    // console.log('Array of data inserted into database')
 });
-app.listen(port, () => {
-    console.log('App listening on port 3000!')
+
+
+// NEW
+app.get('/loads/new', (req, res) => {
+    res.render('loads-new');
+})
+
+//CREATE
+app.post('/loads', (req, res) => {
+    Load.create(req.body).then((load) => {
+        console.log(load)
+        res.redirect(`/loads/${load._id}`);
+    }).catch((err) => {
+        console.log(err.message);
+    });
 });
 
 // SHOW
 app.get('/loads/:id', (req, res) => {
-    var loadId = req.params.id;
-    var load = loads[loadId]
-    res.render('loads-show', { load : load})
-})
+    Load.findById(req.params.id).then((load) => {
+        res.render('loads-show', { load : load })
+    }).catch((err) => {
+        console.log(err.message);
+    });
+});
+
+// DELETE
+app.delete('/loads/:id', function (req,res) {
+    Load.findByIdAndRemove(req.params.id).then((load) => {
+        res.redirect('/');
+    }).catch((err) => {
+        console.log(err.message);
+    });
+});
+
+// EDIT
+app.get('/loads/:id/edit', (req, res) => {
+    Load.findById(req.params.id, function(err, donation) {
+        res.render('loads-edit', {load: load});
+    });
+});
+
+// UPDATE
+app.put('loads/:id', (req, res) => {
+    Load.findByIdAndUpdate(req.params.id, req.body)
+    .then(load => {
+        res.redirect(`/loads/${load.id}`)
+    })
+    .catch(err => {
+        console.log(err.message)
+    });
+});
+
+app.listen(port, () => {
+    console.log('App listening on port 3000!')
+});

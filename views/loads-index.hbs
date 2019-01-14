@@ -15,7 +15,7 @@
         {{#each loads}}
         <tr>
             <th scope="row">{{@index}}</th>
-            <td><a href="/loads/{{@index}}">{{this.pickupDate}}</a></td>
+            <td><a href="/loads/{{this._id}}">{{this.pickupDate}}</a></td>
             <td>{{this.originLocation}}</td>
             <td>{{this.destination}}</td>
             <td>{{this.price}}</td>

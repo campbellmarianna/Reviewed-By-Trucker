@@ -6,21 +6,25 @@
                 <legend>New Load</legend>
                 <div class="form-group">
                         <label for="pickupDate">PickUp Date:</label><br>
-                        <input class="form-control" id="pickupDate" type="text" name="pickupDate" value="{{load.pickupDate}}"/>
+                        <input class="form-control" id="pickupDate" type="text" name="pickupDate" value="{{this.pickupDate}}"/>
                 </div>
                 <div class="form-group">
                         <label for="originLocation">Origin Location:</label><br>
-                        <input class="form-control" id="load" type="text" name="originLocation" value="{{load.originLocation}}"/>
+                        <input class="form-control" id="originLocation" type="text" name="originLocation" value="{{this.originLocation}}"/>
                 </div>
                 <div class="form-group">
                         <label for="destination">Destination: </label><br>
-                        <input class="form-control" id="destination" type="text" name="destination" value="{{load.destination}}"/>
+                        <input class="form-control" id="destination" type="text" name="destination" value="{{this.destination}}"/>
                 </div>
                 <div class="form-group">
-                        <label for="load">Price: </label><br>
-                        <input class="form-control" id="load" type="text" name="load" value="{{load.load}}"/>
+                        <label for="price">Price: </label><br>
+                        <input class="form-control" id="price" type="text" name="load" value="{{this.load}}"/>
                 </div>
             </fieldset>
+            <!-- BUTTON -->
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Save Load</button>
+            </div>
         </form>
     </div>
 </div>
