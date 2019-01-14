@@ -35,7 +35,6 @@ Header
 .header {
     display: flex;
     flex-direction: column;
-    /* text-align: center; */
 }
 
 div.header h1 {
@@ -61,6 +60,7 @@ Questions
 .questions {
     background-color: #FAFAFA;
 }
+
 /*********************************************************
 Further Questions and Submission
 *********************************************************/
@@ -112,11 +112,6 @@ div.home h3 {
     margin-bottom: 40px;
     /* position: */
 }
-
-/* .around-btn {
-    position: absolute;
-    bottom: 10px;
-} */
 
 @media (min-width: 992px){
     height: calc(99vh - 50px);
