@@ -72,21 +72,5 @@ app.listen(port, () => {
 app.get('/loads/:id', (req, res) => {
     var loadId = req.params.id;
     var load = loads[loadId]
-    console.log(load)
-    // // { pickupDate: "01/18/19", originLocation: "246 McAllister Street San Fransico, California", destination: "62169 Addison Drive Joplin, Missiouri", price: "2000", content: "sand"}
-    // console.log(load)
-    // loads.find(function(req.params.id){
-    //     // if (typeof req.params.id === 'number') {
-    //     //     return req.params.id
-    //     // }
-    // }).then((load) => {
-    //     res.render('loads-show', {load: load})
-    // }).catch((err) => {
-    //     console.log(err.message);
-    // })
-    // { pickupDate: "01/18/19", originLocation: "246 McAllister Street San Fransico, California", destination: "62169 Addison Drive Joplin, Missiouri", price: "2000", content: "sand"}
-    // var parsed = JSON.parse(load);
-    // console.log(parsed);
-    // { pickupDate: "01/18/19", originLocation: "246 McAllister Street San Fransico, California", destination: "62169 Addison Drive Joplin, Missiouri", price: "2000", content: "sand"} as JSON
     res.render('loads-show', { load : load})
 })
