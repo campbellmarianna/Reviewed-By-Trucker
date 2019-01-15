@@ -5,8 +5,8 @@
         <h4 class="card-title">{{this.title}}</h4>
         <p class="card-text">{{this.content}}</p>
         <!-- Delete link -->
-        <p><form method="POST" action="/loads/comments/{{comments._id}}?_method=DELETE">
-            <button class="btn btn-primary" type="submit">Delete</button>
+        <p><form method="POST" action="/loads/comments/delete/{{this._id}}">
+            <button class="btn btn-primary" id="delete-btn" type="submit">Delete</button>
         </form></p>
     </div>
 </div>

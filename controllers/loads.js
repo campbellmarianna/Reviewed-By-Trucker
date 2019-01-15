@@ -58,6 +58,7 @@ module.exports = function(app, load) {
         Load.findById(req.params.id).then((load) => {
             // fetch its comments
             Comment.find({ loadId: req.params.id }).then(comments => {
+                // get one comment id
                 // respond with the template with both values
                 res.render('loads-show', { load : load, comments : comments})
             })

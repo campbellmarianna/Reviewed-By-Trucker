@@ -141,7 +141,7 @@ div.loads-index {
 /*********************************************************
 Loads Show
 *********************************************************/
-#loads-show p{
+#loads-show p, h4{
     text-align: left;
 }
 
@@ -158,11 +158,13 @@ Comments
 }
 
 .card {
-    background-color: #707070;
+    background-color: #979478;
     color: #FAFAFA;
+    text-align: left;
+    border: none;
 }
 
-#comment-btn {
+#comment-btn, #delete-btn {
     background-color: #462631;
     border: none;
 }

@@ -7,7 +7,7 @@ module.exports = function (app) {
         return comment.title && comment.title.toString() !== '' &&
         comment.content && comment.content.toString() !== '';
     };
-    
+
     // CREATE comment
     app.post('/loads/comments', (req, res) => {
         if (isValidComment(req.body)) {
@@ -26,10 +26,10 @@ module.exports = function (app) {
     });
 
     // DELETE
-    app.delete('/loads/comments/:id', function (req, res) {
+    app.post('/loads/comments/delete/:id', function (req, res) {
         console.log("DELETE comment");
         Comment.findByIdAndRemove(req.params.id).then((comment) => {
-            res.redirect(`/`);
+            res.redirect(`/loads`);
         }).catch((err) => {
             console.log(err.message);
         })
