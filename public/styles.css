@@ -137,3 +137,27 @@ div.loads-index {
 /* div.loads-index tr {
     background-color:
 } */
+
+/*********************************************************
+Loads Show
+*********************************************************/
+#loads-show p{
+    text-align: left;
+}
+
+#loads-show {
+    background-color: #979478;
+    padding: 10px;
+}
+
+/********************************************************
+Comments
+********************************************************/
+.comment-form {
+    text-align: left;
+}
+
+.card {
+    background-color: #707070;
+    color: #FAFAFA;
+}

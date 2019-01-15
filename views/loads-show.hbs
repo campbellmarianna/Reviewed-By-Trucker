@@ -1,24 +1,27 @@
 <!-- views/loads-show -->
-<a href="/">Back to Home</a>
-<div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-        <h1>Load</h1>
-        <h1>Pickup Date: {{load.pickupDate}}</h1>
-        <h3>Origin Location: {{load.originLocation}}</h3>
-        <h3>Destination: {{load.destination}}</h3>
-        <h3>Price: {{load.price}}</h3>
+<div id="loads-show">
+    <a href="/">Back to Home</a>
+    <div class="row" >
+        <div class="col-sm-6 col-sm-offset-3">
+            <h1>Load Information</h1>
+            <p>Pickup Date: {{load.pickupDate}}</p>
+            <p>Origin Location: {{load.originLocation}}</p>
+            <p>Destination: {{load.destination}}</p>
+            <p>Price: {{load.price}}</p>
 
-        <hr>
+            <hr>
 
-        <!-- Comment form -->
-        {{> comment-form}}
+            <!-- Comment form -->
+            {{> comment-form}}
 
-        <hr>
+            <hr>
 
-        <!-- Show Coments -->
-        {{#each comments}}
-            {{> comment}}
-        {{/each}}
-        
+            <!-- Show Coments -->
+            <div class="comments-show">
+            {{#each comments}}
+                {{> comment}}
+            {{/each}}
+            </div>
+        </div>
     </div>
 </div>
