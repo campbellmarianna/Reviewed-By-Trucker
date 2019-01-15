@@ -69,7 +69,7 @@ module.exports = function(app, load) {
     // DELETE
     app.delete('/loads/:id', function (req,res) {
         Load.findByIdAndRemove(req.params.id).then((load) => {
-            res.redirect('/');
+            res.redirect('/loads');
         }).catch((err) => {
             console.log(err.message);
         });

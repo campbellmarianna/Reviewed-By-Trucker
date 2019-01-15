@@ -161,3 +161,8 @@ Comments
     background-color: #707070;
     color: #FAFAFA;
 }
+
+#comment-btn {
+    background-color: #462631;
+    border: none;
+}
