@@ -3,10 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema
 
 const Load = mongoose.model ('Load', {
+    company: String,
     pickupDate: String,
     originLocation: String,
     destination: String,
-    price: String
+    rate: String
 });
 
 module.exports = Load;

@@ -26,10 +26,11 @@ module.exports = function(app, load) {
     })
 
     function isValidLoad(load) {
-        return load.pickupDate && load.pickupDate.toString().trim() !== '' &&
+        return load.company && load.company.toString() !== '' &&
+        load.pickupDate && load.pickupDate.toString().trim() !== '' &&
         load.originLocation && load.originLocation.toString() !== '' &&
         load.destination && load.destination.toString() !== '' &&
-        load.price && load.price.toString() !== '';
+        load.rate && load.rate.toString() !== '';
     };
 
     // CREATE
