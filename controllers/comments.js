@@ -3,14 +3,26 @@ Comment = require('../models/comment')
 
 module.exports = function (app) {
 
+    function isValidComment(comment) {
+        return comment.title && comment.title.toString() !== '' &&
+        comment.content && comment.content.toString() !== '';
+    };
+    
     // CREATE comment
     app.post('/loads/comments', (req, res) => {
-        Comment.create(req.body).then(comment => {
-            // console.log(comment)
-            res.redirect(`/loads/${comment.loadId}`);
-        }).catch((err) => {
-            console.log(err.message);
-        });
+        if (isValidComment(req.body)) {
+            Comment.create(req.body).then(comment => {
+                // console.log(comment)
+                res.redirect(`/loads/${comment.loadId}`);
+            }).catch((err) => {
+                console.log(err.message);
+            });
+        } else {
+            res.status(422);
+            res.json({
+                message : "Hey! Comment information is required."
+            })
+        }
     });
 
     // DELETE

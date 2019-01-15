@@ -25,14 +25,30 @@ module.exports = function(app, load) {
         res.render('loads-new');
     })
 
+    function isValidLoad(load) {
+        return load.pickupDate && load.pickupDate.toString().trim() !== '' &&
+        load.originLocation && load.originLocation.toString() !== '' &&
+        load.destination && load.destination.toString() !== '' &&
+        load.price && load.price.toString() !== '';
+    };
+
     // CREATE
     app.post('/loads', (req, res) => {
-        Load.create(req.body).then((load) => {
-            console.log(load)
-            res.redirect(`/loads/${load._id}`);
-        }).catch((err) => {
-            console.log(err.message);
-        });
+        if (isValidLoad(req.body)) {
+            // insert into db
+            Load.create(req.body).then((load) => {
+                console.log(load)
+                res.redirect(`/loads/${load._id}`);
+            }).catch((err) => {
+                console.log(err.message);
+            });
+        } else {
+            res.status(422);
+            res.json({
+                message: 'Hey! Load information is required.'
+            });
+        }
+
     });
 
     // SHOW
