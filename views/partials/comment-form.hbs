@@ -1,7 +1,9 @@
 <!-- views/partials/comment-form.handlebars -->
-<form action="/reviews/comments" method="post">
+
+<form action="/loads/comments" method="post">
+    <input type="hidden" value="{{load._id}}" name="loadId"
     <fieldset>
-        <legend>Add a Comment</legend>
+        <legend>Add a Review</legend>
         <!-- TITLE -->
         <div class="form-group">
             <label for="comment-title">Title</label><br>

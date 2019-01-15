@@ -7,11 +7,18 @@
         <h3>Origin Location: {{load.originLocation}}</h3>
         <h3>Destination: {{load.destination}}</h3>
         <h3>Price: {{load.price}}</h3>
-        <h3>Content: {{load.content}}</h3>
 
         <hr>
 
         <!-- Comment form -->
         {{> comment-form}}
+
+        <hr>
+
+        <!-- Show Coments -->
+        {{#each comments}}
+            {{> comment}}
+        {{/each}}
+        
     </div>
 </div>
