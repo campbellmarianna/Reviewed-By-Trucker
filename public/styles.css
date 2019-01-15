@@ -24,10 +24,10 @@ body {
 
 }
 
-div.container div {
+/* div.container div {
     height: 200px;
     width: 100%;
-}
+} */
 
 /*********************************************************
 Header
@@ -121,3 +121,19 @@ div.home h3 {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/********************************************************
+Loads Index
+*********************************************************/
+div.loads-index h1 {
+    padding: 10px;
+}
+
+div.loads-index {
+    background-color: #979478;
+    color: #FAFAFA;
+}
+
+/* div.loads-index tr {
+    background-color:
+} */
