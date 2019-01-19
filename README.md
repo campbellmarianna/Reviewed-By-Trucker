@@ -1,9 +1,14 @@
 # Reviewed By Trucker
 
-This app gets information from a trucker about a load to the dispatcher to help maintain on-time delivery.
-**_Reviewed By Trucker_**  An application created with Node, Express, HTML, and CSS.
+[![forthebadge](https://forthebadge.com/images/badges/made-with-node.svg)](https://forthebadge.com)
 
-A trucker will be able to answer and few questions about the load.
+
+A web app that enables truckers to review a company that post loads. **_Reviewed By Trucker_** was created with Node, Express, HTML, and CSS.
+
+### Preview Samples
+| Home View | Categories |
+| --- | --- |
+|![Product Screenshot 1](screenshot1.jpg) | ![Product Screenshot 2](screenshot2.jpg) | 
 
 Website: https://rbt-mc.herokuapp.com/
 
@@ -16,8 +21,8 @@ https://rbt-mc.herokuapp.com/
 User can see a list of loads.
 
 ```
-Index - http://localhost:3000/loads
-Show - http://localhost:3000/loads/:id
+Index - https://rbt-mc.herokuapp.com/loads
+Show - https://rbt-mc.herokuapp.com/loads/:id
 ```
 
 ## Running Locally
