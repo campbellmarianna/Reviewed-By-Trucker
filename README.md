@@ -1,6 +1,6 @@
 # Reviewed By Trucker
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-node.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 
 A web app that enables truckers to review a company that post loads. **_Reviewed By Trucker_** was created with Node, Express, HTML, and CSS.
@@ -8,7 +8,7 @@ A web app that enables truckers to review a company that post loads. **_Reviewed
 ### Preview Samples
 | Home View | Categories |
 | --- | --- |
-|![Product Screenshot 1](public/img/screenshot1.jpg) | ![Product Screenshot 2](public/img/screenshot2.jpg) | 
+|![Product Screenshot 1](public/img/screenshot1.jpg) | ![Product Screenshot 2](public/img/screenshot2.jpg) |
 
 Website: https://rbt-mc.herokuapp.com/
 
