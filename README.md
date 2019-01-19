@@ -6,7 +6,7 @@
 A web app that enables truckers to review a company that post loads. **_Reviewed By Trucker_** was created with Node, Express, HTML, and CSS.
 
 ### Preview Samples
-| Home View | Categories |
+| Home View | Loads |
 | --- | --- |
 |![Product Screenshot 1](public/img/screenshot1.jpg) | ![Product Screenshot 2](public/img/screenshot2.jpg) |
 
