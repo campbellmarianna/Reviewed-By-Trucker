@@ -14,6 +14,8 @@ Website: https://rbt-mc.herokuapp.com/
 
 ## Base URL
 
+## Preview Samples
+
 ```
 https://rbt-mc.herokuapp.com/
 ```
