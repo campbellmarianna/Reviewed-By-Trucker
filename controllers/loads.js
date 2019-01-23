@@ -76,14 +76,14 @@ module.exports = function(app, load) {
         });
     });
 
-    // EDIT
+    // EDIT - not operational
     app.get('/loads/:id/edit', (req, res) => {
         Load.findById(req.params.id, function(err, donation) {
             res.render('loads-edit', {load: load});
         });
     });
 
-    // UPDATE
+    // UPDATE - not operational
     app.put('loads/:id', (req, res) => {
         Load.findByIdAndUpdate(req.params.id, req.body)
         .then(load => {
