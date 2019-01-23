@@ -47,7 +47,7 @@ npm install mocha chai chai-http
 
 - `chai` is our Assertion Library - it gives us syntactic sugar to make writing test intuitive
 
-- `chai-http` is a Helper Test Library - it gives us methods to make http request inside our tests very easily
+- `chai-http` is a Helper Test Library - it gives us methods to make http request inside our tests very easy
 
 ## Running the tests
 
@@ -62,7 +62,6 @@ These tests check each route to make sure a HTML template is rendered.
 ```
 // tell mocha we want to test Loads (this string is taco - it can be anything)
 describe('Loads', () => {
-
     // TEST HOME
     // use taco name for the test
     it('should display homepage on / GET', (done) => {
