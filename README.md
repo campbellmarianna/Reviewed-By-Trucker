@@ -14,8 +14,6 @@ Website: https://rbt-mc.herokuapp.com/
 
 ## Base URL
 
-## Preview Samples
-
 ```
 https://rbt-mc.herokuapp.com/
 ```
@@ -39,7 +37,7 @@ npm i && nodemon
 The app should now be running on [localhost:3000](http://localhost:3000/).
 
 ## Installing
-To run tests Mocha, Chia and Chia-Http need to be installed.
+[Mocha](https://mochajs.org/), [Chia](https://www.chaijs.com/), and [Chai-Http](https://github.com/chaijs/chai-http) need to be installed for running test.
 
 ```sh
 npm install mocha chai chai-http
@@ -53,7 +51,7 @@ npm install mocha chai chai-http
 
 ## Running the tests
 
-Make sure you have [Mocha](https://mochajs.org/), [Chia](https://www.chaijs.com/), and [Chai-Http]() installed.
+Make sure you have Mocha, Chia and Chia-Http installed.
 
 Inside the project directory type `mocha` to run the tests.
 
