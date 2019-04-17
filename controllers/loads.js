@@ -62,7 +62,7 @@ module.exports = function(app, load) {
 
     // SHOW
     app.get('/loads/:id', (req, res) => {
-        // fund load
+        // find load
         Load.findById(req.params.id).then((load) => {
             // fetch its comments
             Comment.find({ loadId: req.params.id }).then(comments => {
@@ -70,6 +70,7 @@ module.exports = function(app, load) {
                 // respond with the template with both values
                 res.render('loads-show', { load : load, comments : comments})
             })
+        // If there is an error thrown catch it and return it to the programmer
         }).catch((err) => {
             console.log(err.message);
         });
