@@ -35,15 +35,19 @@ module.exports = function(app, load) {
 
     // CREATE
     app.post('/loads', (req, res) => {
+        // check if load is valid
         if (isValidLoad(req.body)) {
             // insert into db
             Load.create(req.body).then((load) => {
-                console.log(load)
+                // Show the user the load they created
                 res.redirect(`/loads/${load._id}`);
             }).catch((err) => {
+                // If there is an issue adding the load to the database
+                // given the programmer an error message
                 console.log(err.message);
             });
         } else {
+            // If the load is inputed wrong return a message to the user
             res.status(422);
             res.json({
                 message: 'Hey! Load information is required.'
@@ -51,6 +55,10 @@ module.exports = function(app, load) {
         }
 
     });
+    // const postLoad = async () => {
+    //     console.log(await app.)
+    // }
+
 
     // SHOW
     app.get('/loads/:id', (req, res) => {

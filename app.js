@@ -22,8 +22,12 @@ const port = process.env.PORT || 3000;
 // Import Controllers
 const loadsController = require('./controllers/loads');
 const commentsController = require('./controllers/comments');
+const productsController = require('./controllers/products');
+productsController(app)
 loadsController(app);
 commentsController(app);
+
+
 
 // Connection
 const mongoUri =
