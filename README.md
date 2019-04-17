@@ -1,6 +1,6 @@
 # Reviewed By Trucker
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+![Github](https://img.shields.io/github/languages/top/campbellmarianna/Reviewed-By-Trucker.svg)
 
 
 A web app that enables truckers to review a company that post loads. **_Reviewed By Trucker_** was created with Node, Express, HTML, and CSS.
